@@ -18,7 +18,7 @@ Recently, I have been hard at work building [Twitch Vs Minecraft](https://github
 Before reading, make sure you have some basic knowledge of Java. Some Java tutorials will be linked below.
 
 > DISCLAIMER: THIS TUTORIAL CODE WILL NOT WORK IN VERSIONS ABOVE 1.12.2, AND HAS NOT BEEN TESTED WITH ANY VERSION BELOW.
-***
+
 # Getting Started
 First, you will need to head over to the [Minecraft Forge Website](https://files.minecraftforge.net) and download the recommended MDK version. Once you have the zip file, extract it into a folder. Next, open a terminal in that folder and type the following command:
 ```
@@ -37,7 +37,7 @@ gradlew genIntellijRuns
 This can also be found in the **Gradle** tab on the right of the screen.
 
 When moving over to IDEA from Eclipse, follow the above steps and then run `cleanEclipse` from the Gradle tab to remove all of Eclipse's files.
-***
+
 # The Example Mod
 When you first set everything up, you will be given an example mod. It is located in `com.examplemod.examplemod`. Here's what that looks like:
 ```java
@@ -63,7 +63,7 @@ public class ExampleMod
 }
 ```
 While you most likely want to delete this, it's a good example of how to create a main class.
-***
+
 # Build.gradle
 This file contains details such as your mod's name, package name, author name, and version. You will need to change these values:
 ```gradle
@@ -78,12 +78,12 @@ group= "com.icrazyblaze.twitchmod"
 archivesBaseName = "twitchmod"
 ```
 Remember, the **archivesBaseName** property needs to be the same as the last part of the **group** property.
-***
+
 # Mcmod.info
 This file is no longer found in newer versions of the MDK, and is instead replaced with **mods.toml**. However, for this tutorial we are using 1.12.2.
 
 This file also contains information for your mod, specifically the info that is displayed in the **Mods** menu in-game. [This page](https://mcforge.readthedocs.io/en/latest/gettingstarted/structuring/) tells you everything you need to know about using this file.
-***
+
 # Running the mod
 While making your mod, you will want to be able to run it. To do this, click the **Debug icon** ![](https://www.jetbrains.com/help/img/idea/2019.2/icons.actions.startDebugger_dark.svg@2x.png) with the **runClient** configuration enabled. You can alternatively run the game from a terminal, or use the Run option rather than debugging.
 
@@ -92,7 +92,7 @@ While changed classes are automaitcally reloaded when debugging in Eclipse, Inte
 To enable **Reloading changed classes** using a keyboard shortcut, go to **File -> settings** and search for **"keymap"** when in the keymap menu, search for **"Reload"** and find **"Reload changed classes"**, which is located under **"Run"**. I personally have this bound to <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>r</kbd>. While this may not always work, it helps when making quick edits to your mod.
 
 When loading into a game, you will be logged in as a random username. You can set it up to use your Minecraft account, but this is not recommended, as it can cause security issues, and is usually not needed.
-***
+
 # Creating a main class - Forge events
 So now we need to create our main class. As a starting point, you can use the example mod shown earlier. The **FMLInitializationEvent** happens when the mod is loading, so we will see the output somewhere around the main menu. There is also the **FMLpreInitializationEvent** event, which as the name implies, is called before the Initialization event.
 
@@ -125,7 +125,7 @@ The **ServerStarting** event is used to register commands. Here's an example:
         event.registerServerCommand(new TTVCommand());
     }
 ```
-***
+
 # Creating a command
 Let's create our own command that we can register from our main class just like that one. First of all, we'll create a package called **command**. This is just a standard way of keeping things neat and easy to access. We then create a class called **TutorialCommand** and extend it from **CommandBase** by adding `extends CommandBase` to the end of our `public class TutorialCommand`.
 
@@ -213,10 +213,10 @@ if (args[0].equalsIgnoreCase("argument1")) {
 }
 ```
 **TextFormatting** is used here to change the colour of the text in the chat.
-***
+
 # Creating blocks and items
 For this section, there is a really nice YouTube tutorial by Harry Talks. [Click Here](https://youtu.be/42z8_UDLmk4) to watch it. Both blocks and items are covered by the video. You can also check the links below for written tutorials.
-***
+
 # Creating a GUI Overlay
 GUI overlays appear on the player's screen, but don't enable the mouse. Think of them as custom HUD elements. 
 
@@ -249,7 +249,7 @@ public class TimerGui extends Gui {
 }
 ```
 This code renders the text "Hello world!" in dark red in the top left corner of the screen. Replace `condition goes here` with a valid boolean to be able to enable and disable the GUI.
-***
+
 # Creating a GUI Screen
 GUI Screens are like Overlays, but the mouse is enabled and the player can interact with the GUI. An example of this is the game's pause menu.
 
@@ -323,12 +323,12 @@ Now let's make our button functional:
 When the button is clicked, it sets a boolean called `displayGUI` to false, and in the `drawScreen` function we say that if the variable is false, we close the screen.
 
 The background image I used for the GUI *("textures/gui/messagebox_background.png")* can be found [here](https://github.com/iCrazyBlaze/TwitchVsMinecraft/blob/master/src/main/resources/assets/twitchmod/textures/gui/messagebox_background.png). It is based on the Crafting Table GUI.
-***
+
 # Creating a custom crafting recipe
 To create a custom crafting recipe, you want to first go to your **resources folder** (usually src/main/resources) and create a folder named **recipes**. Create a json file with whatever name you want, but make it something sensible and memorable, like your item name followed by the word "recipe". Then, head over to [this website](https://crafting.thedestruc7i0n.ca/) and copy and paste the output json into your blank json file. because we are using 1.12.2, some items, blocks and crafting methods, for example the Stonecutter and Blast Furnace are unavailable. Make sure you only use what is available in your Minecraft version.
 
 If you want your crafting recipe to make a custom item, you can use a placeholder item. For example, I will make the output of my crafting recipe on the website TNT, and then replace where it says `minecraft:tnt` in the output json to `tutorialMod:tutorialItem`.
-***
+
 # Config files
 Configuration files are stored in the `config` folder, as `<modname>.cfg`. To save and load a configuration file, we will create a **ConfigManager class**. I am creating under the package `util`.
 
@@ -387,7 +387,7 @@ Now we move on to saving to the config file. Underneath our property in `saveCon
 tutorialProp.set(tutorialClass.tutorialVariable);
 ```
 It's really that simple! We can call `saveConfig()` from other classes - this is best done using a command.
-***
+
 # Building the mod
 So, you have now tested your mod thoroughly, it works great, and you are happy with it. But you want to be able to upload the mod to CurseForge, or another similar website. To build your mod's Jar file, use the following command in your project's root directory:
 ```
@@ -396,8 +396,6 @@ gradlew build
 You can also run this from the Gradle tab in IntelliJ IDEA.
 
 This will generate two files: one is your mod's Jar, and another has the same name, but with "-sources" on the end. **The sources file is not a mod!** You can ignore and/or delete this file.
-
-***
 
 # Helpful links
 **Want to know more? Check out these links:**
