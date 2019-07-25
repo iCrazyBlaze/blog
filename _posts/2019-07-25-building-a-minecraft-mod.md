@@ -2,7 +2,7 @@
 layout:     post
 title:      Adventures in building a Minecraft mod
 date:       2019-07-25 14:35:00
-summary:    How I learned Minecraft modding
+summary:    How to learn Minecraft modding
 categories: coding
 thumbnail: minecraft
 tags:
@@ -203,7 +203,7 @@ For this section, there is a really nice YouTube tutorial by Harry Talks. [Click
 # Creating a GUI Overlay
 GUI overlays appear on the player's screen, but don't enable the mouse. Think of them as custom HUD elements. 
 
-To get started with creating one, I will create my `TutorialOverlay` class inside a package called `gui`. here's what the class will look like:
+To get started with creating one, I will create my `TutorialOverlay` class inside a package called `gui`. Here's what the class will look like:
 ```java
 package com.icrazyblaze.tutorialmod.gui;
 
@@ -231,7 +231,7 @@ public class TimerGui extends Gui {
 
 }
 ```
-This code renders the text "Hello world!" in dark red in the top left corner of the screen. Replace `condition goes here` with a valid boolean to be able to enable and disale the GUI.
+This code renders the text "Hello world!" in dark red in the top left corner of the screen. Replace `condition goes here` with a valid boolean to be able to enable and disable the GUI.
 
 # Creating a GUI Screen
 GUI Screens are like Overlays, but the mouse is enabled and the player can interact with the GUI. An example of this is the game's pause menu.
