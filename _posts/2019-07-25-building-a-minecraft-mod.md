@@ -301,11 +301,17 @@ Want to know more? Check out these links:
 
 [Forge Docs](https://mcforge.readthedocs.io/)
 
+[ShadowFacts' Tutorials](https://shadowfacts.net/tutorials/forge-modding-112/)
+
+[McJty Modding Wiki (multiple versions)](https://wiki.mcjty.eu/modding/index.php?title=Main_Page)
+
 [Video Tutorials (Harry Talks)](https://www.youtube.com/channel/UCUAawSqNFBEj-bxguJyJL9g/videos)
 
 [CubiCoder's 1.12.2 modding tutorials](https://cubicoder.github.io/tutorials/1-12-2/tutorials/)
 
 [Jabelar's tutorials (for 1.7 and above)](http://jabelarminecraft.blogspot.com/)
+
+[Minecraft By Example (source code)](https://github.com/TheGreyGhost/MinecraftByExample/)
 
 [Minecraft Mod Development Discord](https://discordapp.com/invite/EDbExcX)
 
