@@ -402,6 +402,8 @@ This will generate two files: one is your mod's Jar, and another has the same na
 # Helpful links
 **Want to know more? Check out these links:**
 
+[W3Schools Java Course](https://www.w3schools.com/java/default.asp)
+
 [TutorialsPoint basic Java tutorials](https://www.tutorialspoint.com/java/)
 
 [CodeAcademy Java course](https://www.codecademy.com/learn/learn-java)
