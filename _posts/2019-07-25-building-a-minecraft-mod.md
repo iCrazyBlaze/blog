@@ -15,6 +15,8 @@ tags:
 
 Recently, I have been hard at work building [Twitch Vs Minecraft](https://github.com/iCrazyBlaze/TwitchVsMinecraft), my first ever mod for Minecraft Forge. In this post, I will be showing you how to create your first Minecraft mod using the Forge API for Minecraft 1.12.2, and I will answer some of the most commonly asked modding questions with full code.
 
+Before reading, make sure you have some basic knowledge of Java. Some Java tutorials will be linked below.
+
 > DISCLAIMER: THIS TUTORIAL CODE WILL NOT WORK IN VERSIONS ABOVE 1.12.2, AND HAS NOT BEEN TESTED WITH ANY VERSION BELOW.
 
 # Getting Started
@@ -26,7 +28,7 @@ If you're using Eclipse, you will then want to type:
 ```
 gradlew eclipse
 ```
-to generate the correct files. If you're using IntelliJ IDEA (which is highly recommended), you can instead import the **build.gradle** file as a project.
+to generate the correct files. If you're using [IntelliJ IDEA](https://www.jetbrains.com/idea/) (which is highly recommended), you can instead import the **build.gradle** file as a project.
 
 # The Example Mod
 When you first set everything up, you will be given an example mod. Here's what that looks like:
@@ -299,6 +301,10 @@ Want to know more? Check out these links:
 
 [Jabelar's tutorials (for 1.7 and above)](http://jabelarminecraft.blogspot.com/)
 
+[Minecraft Mod Development Discord](https://discordapp.com/invite/EDbExcX)
+
+[MMD Pins](https://github.com/MinecraftModDevelopment/Modding-Resources/blob/master/dev_pins.md)
+
 [Minecraft Forum](https://www.minecraftforum.net/)
 
-[CurseForge](https://curseforge.com/)
+[Minecraft CurseForge](https://curseforge.com/minecraft)
