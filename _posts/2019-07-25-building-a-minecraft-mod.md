@@ -39,7 +39,7 @@ This can also be found in the **Gradle** tab on the right of the screen.
 When moving over to IDEA from Eclipse, follow the above steps and then run `cleanEclipse` from the Gradle tab to remove all of Eclipse's files.
 
 # The Example Mod
-When you first set everything up, you will be given an example mod. Here's what that looks like:
+When you first set everything up, you will be given an example mod. It is located in `com.examplemod.examplemod`. Here's what that looks like:
 ```java
 package com.example.examplemod;
 
@@ -57,8 +57,8 @@ public class ExampleMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-		// some example code
-        System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
+	// some example code
+        System.out.println("DIRT BLOCK >> " + Blocks.DIRT.getUnlocalizedName());
     }
 }
 ```
