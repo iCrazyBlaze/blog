@@ -79,6 +79,28 @@ This file also contains information for your mod, specifically the info that is 
 # Creating a main class - Forge events
 So now we need to create our main class. As a starting point, you can use the example mod shown earlier. The **FMLInitializationEvent** happens when the mod is loading, so we will see the output somewhere around the main menu. There is also the **FMLpreInitializationEvent** event, which as the name implies, is called before the Initialization event.
 
+The Pre-Initialization event is used for setting up the **Logger**. This is useful for outputting information to the console. The event can also be used for loading **Config Files**. Here's an example of what that looks like:
+```java
+    public static Logger logger;
+    public static Configuration config;
+
+    //......
+
+    @EventHandler
+    public static void Preinit(FMLPreInitializationEvent event) {
+        logger = event.getModLog();
+        config = new Configuration(event.getSuggestedConfigurationFile());
+        ConfigManager.loadConfig();
+    }
+```
+*ConfigManager appears later in the tutorial.*
+
+To use the logger, we will use:
+```java
+Main.logger.info("Hello world!");
+```
+You can also make the logger output warnings and errors.
+
 The **ServerStarting** event is used to register commands. Here's an example:
 ```java
     @EventHandler
@@ -289,6 +311,64 @@ The background image I used for the GUI *("textures/gui/messagebox_background.pn
 To create a custom crafting recipe, you want to first go to your **resources folder** (usually src/main/resources) and create a folder named **recipes**. Create a json file with whatever name you want, but make it something sensible and memorable, like your item name followed by the word "recipe". Then, head over to [this website](https://crafting.thedestruc7i0n.ca/) and copy and paste the output json into your blank json file. because we are using 1.12.2, some items, blocks and crafting methods, for example the Stonecutter and Blast Furnace are unavailable. Make sure you only use what is available in your Minecraft version.
 
 If you want your crafting recipe to make a custom item, you can use a placeholder item. For example, I will make the output of my crafting recipe on the website TNT, and then replace where it says `minecraft:tnt` in the output json to `tutorialMod:tutorialItem`.
+
+# Config files
+Configuration files are stored in the `config` folder, as `<modname>.cfg`. To save and load a configuration file, we will create a **ConfigManager class**. I am creating under the package `util`.
+
+Here's what it should look like:
+```java
+public class ConfigManager {
+
+    public static Configuration config;
+
+    public static void loadConfig() { // Gets called from preInit
+
+        // Config file is made in the Main class
+        config = Main.config;
+
+        try {
+
+            // Properties go here
+
+        } catch (Exception e) {
+            // Failed reading/writing, just continue
+        }
+    }
+
+    public static void saveConfig() {
+
+        // Config file is made in the Main class
+        config = Main.config;
+
+        try {
+
+            // Properties go here
+
+        } catch (Exception e) {
+            // Failed reading/writing, just continue
+        }
+    }
+}
+```
+**Properties** are how variables are stored inside the file.
+```java
+Property tutorialProp = config.get(Configuration.CATEGORY_GENERAL, // What category will it be saved to, can be any string
+        "TUTORIAL_VARIABLE", // Property name
+        "Hello world!", // Default value
+        "Our string."); // Comment
+```
+Paste this property inside both the `loadConfig` and `saveConfig` functions. Underneath it in `loadConfig`, we will add:
+```java
+tutorialClass.tutorialVariable = tutorialProp.getString();
+```
+Here, our `tutorialVariable` is part of another class, called `tutorialClass`. Because our variable is a string, we use `.getString()` to return the value. You can also use `.getInt()`, `.getBoolean()` etc. depending on the data type.
+
+Now we move on to saving to the config file. Underneath our property in `saveConfig`, we will set our property to the value of `tutorialClass.tutorialVariable` - the reverse of what we just did in `loadConfig`.
+
+```java
+tutorialProp.set(tutorialClass.tutorialVariable);
+```
+It's really that simple! We can call `saveConfig` from other classes - this is best done using a command.
 
 # Helpful links
 Want to know more? Check out these links:
