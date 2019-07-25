@@ -36,6 +36,8 @@ gradlew genIntellijRuns
 ```
 This can also be found in the **Gradle** tab on the right of the screen.
 
+When moving over to IDEA from Eclipse, follow the above steps and then run `cleanEclipse` from the Gradle tab to remove all of Eclipse's files.
+
 # The Example Mod
 When you first set everything up, you will be given an example mod. Here's what that looks like:
 ```java
@@ -385,6 +387,16 @@ Now we move on to saving to the config file. Underneath our property in `saveCon
 tutorialProp.set(tutorialClass.tutorialVariable);
 ```
 It's really that simple! We can call `saveConfig()` from other classes - this is best done using a command.
+
+# Building the mod
+So, you have now tested your mod thoroughly, it works great, and you are happy with it. But you want to be able to upload the mod to CurseForge, or another similar website. To build your mod's Jar file, use the following command in your project's root directory:
+```
+gradlew build
+```
+You can also run this from the Gradle tab in IntelliJ IDEA.
+
+This will generate two files: one is your mod's Jar, and another has the same name, but with "-sources" on the end. **The sources file is not a mod!** You can ignore and/or delete this file.
+
 
 # Helpful links
 Want to know more? Check out these links:
