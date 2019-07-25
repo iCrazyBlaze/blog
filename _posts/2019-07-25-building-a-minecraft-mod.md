@@ -293,17 +293,21 @@ If you want your crafting recipe to make a custom item, you can use a placeholde
 # Helpful links
 Want to know more? Check out these links:
 
+[TutorialsPoint basic Java tutorials](https://www.tutorialspoint.com/java/)
+
+[CodeAcademy Java course](https://www.codecademy.com/learn/learn-java)
+
+[MMD Pins (more links)](https://github.com/MinecraftModDevelopment/Modding-Resources/blob/master/dev_pins.md)
+
 [Forge Docs](https://mcforge.readthedocs.io/)
 
 [Video Tutorials (Harry Talks)](https://www.youtube.com/channel/UCUAawSqNFBEj-bxguJyJL9g/videos)
 
-[CubiCoder's 1.12 tutorials](https://cubicoder.github.io/tutorials/1-12-2/tutorials/)
+[CubiCoder's 1.12.2 modding tutorials](https://cubicoder.github.io/tutorials/1-12-2/tutorials/)
 
 [Jabelar's tutorials (for 1.7 and above)](http://jabelarminecraft.blogspot.com/)
 
 [Minecraft Mod Development Discord](https://discordapp.com/invite/EDbExcX)
-
-[MMD Pins](https://github.com/MinecraftModDevelopment/Modding-Resources/blob/master/dev_pins.md)
 
 [Minecraft Forum](https://www.minecraftforum.net/)
 
