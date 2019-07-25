@@ -9,6 +9,8 @@ layout: default
   {% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
 {% endif %}
 
+<a id="scrollbutton"></a>
+
 <div class="container-fluid single">
   <div class="row">
 
@@ -185,5 +187,3 @@ var disqus_shortname = "{{ site.disqus_account }}"; // required: replace example
 })();
 </script>
 {% endif %}
-
-<a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
