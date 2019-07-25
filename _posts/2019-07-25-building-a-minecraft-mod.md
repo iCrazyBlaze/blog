@@ -30,6 +30,12 @@ gradlew eclipse
 ```
 to generate the correct files. If you're using [IntelliJ IDEA](https://www.jetbrains.com/idea/) (which is highly recommended), you can instead import the **build.gradle** file as a project.
 
+You will then want to run:
+```
+gradlew genIntellijRuns
+```
+This can also be found in the **Gradle** tab on the right of the screen.
+
 # The Example Mod
 When you first set everything up, you will be given an example mod. Here's what that looks like:
 ```java
@@ -75,6 +81,15 @@ Remember, the **archivesBaseName** property needs to be the same as the last par
 This file is no longer found in newer versions of the MDK, and is instead replaced with **mods.toml**. However, for this tutorial we are using 1.12.2.
 
 This file also contains information for your mod, specifically the info that is displayed in the **Mods** menu in-game. [This page](https://mcforge.readthedocs.io/en/latest/gettingstarted/structuring/) tells you everything you need to know about using this file.
+
+# Running the mod
+While making your mod, you will want to be able to run it. To do this, click the **Debug icon** ![](https://www.jetbrains.com/help/img/idea/2019.2/icons.actions.startDebugger_dark.svg@2x.png) with the **runClient** configuration enabled. You can alternatively run the game from a terminal, or use the Run option rather than debugging.
+
+While changed classes are automaitcally reloaded when debugging in Eclipse, IntelliJ IDEA doesn't have this by default.
+
+To enable **Reloading changed classes** using a keyboard shortcut, go to **File -> settings** and search for **"keymap"** when in the keymap menu, search for **"Reload"** and find **"Reload changed classes"**, which is located under **"Run"**. I personally have this bound to <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>r</kbd>. While this may not always work, it helps when making quick edits to your mod.
+
+When loading into a game, you will be logged in as a random username. You can set it up to use your Minecraft account, but this is not recommended, as it can cause security issues, and is usually not needed.
 
 # Creating a main class - Forge events
 So now we need to create our main class. As a starting point, you can use the example mod shown earlier. The **FMLInitializationEvent** happens when the mod is loading, so we will see the output somewhere around the main menu. There is also the **FMLpreInitializationEvent** event, which as the name implies, is called before the Initialization event.
