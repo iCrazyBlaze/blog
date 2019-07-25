@@ -5,10 +5,10 @@ description: "My coding projects and videos"
 baseurl: "/blog"
 url: "http://icrazyblaze.github.io/"
 title_description: "My coding projects and videos"
-title_image: "https://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
+title_image: "https://icrazyblaze.github.io/images/avatar.png"
 google_analytics: "UA-20365477-4"
 disqus_account: cartenoire
-github_repository: https://github.com/icrazyblaze/carte-noire
+github_repository: https://github.com/icrazyblaze/blog
 addthis_id: ra-513c6fa83da6ec67
 post_limit: 5
 
