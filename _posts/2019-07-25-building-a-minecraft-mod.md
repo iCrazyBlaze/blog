@@ -350,6 +350,7 @@ public class ConfigManager {
     }
 }
 ```
+Now we will replace *properties go here* with our properties.
 **Properties** are how variables are stored inside the file.
 ```java
 Property tutorialProp = config.get(Configuration.CATEGORY_GENERAL, // What category will it be saved to, can be any string
