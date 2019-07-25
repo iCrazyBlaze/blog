@@ -13,7 +13,7 @@ tags:
  - forge
 ---
 
-Recently, I have been hard at work building [Twitch Vs Minecraft](https://github.com/iCrazyBlaze/TwitchVsMinecraft), my first ever mod for Minecraft Forge. In this post, I will be showing you how to create your first Minecraft mod using the Forge API for Minecraft 1.12.2, and I will answer some of the most commonly asked modding questions with full code.
+Recently, I have been hard at work building [Twitch Vs Minecraft](https://github.com/iCrazyBlaze/TwitchVsMinecraft), my first ever mod for [Minecraft Forge](https://files.minecraftforge.net). In this post, I will be showing you how to create your first Minecraft mod using the Forge API for Minecraft 1.12.2, and I will answer some of the most commonly asked modding questions with full code.
 
 Before reading, make sure you have some basic knowledge of Java. Some Java tutorials will be linked below.
 
