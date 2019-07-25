@@ -6,11 +6,8 @@
 
 /* Colours */
 $twitter:        #6dabda;
-$linkedin:       #2b77b1;
-$xing:           #006567;
-$google-plus:    #c95644;
 $facebook:       #365899;
-$github:         #f6c2a4;
+$github:         #B8372F;
 $stack-overflow: #c98b3b;
 $instagram:      #cd486b;
 $reddit:         #FF5700;
@@ -28,7 +25,7 @@ $white:          #FFFFFF;
 $dark-purple:    #300030;
 $medium-purple:  #480048;
 $regular-purple: #601848;
-$red:            #C04848;
+$red:            #B8372F;
 $orange:         #F07241;
 
 /* Responsive sizes */
@@ -182,18 +179,6 @@ ul {
 
 	.fa-twitter:hover {
 		color: $twitter;
-	}
-
-	.fa-linkedin:hover {
-		color: $linkedin;
-	}
-	
-	.fa-xing:hover {
-		color: $xing;
-	}
-
-	.fa-google-plus:hover {
-		color: $google-plus;
 	}
 	
 	.fa-facebook:hover {
