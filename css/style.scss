@@ -15,13 +15,14 @@ $stack-overflow: #c98b3b;
 $instagram:      #cd486b;
 $reddit:         #cee3f8;
 $rss:            #eea33a;
+$globe:			 #ffa600
 
 $darker:         #21211E;
 $dark:           #2D2D29;
 $medium:         #3B3B35;
 $light-medium:   #969696;
 $dark-blue:      #e69000;
-$light-blue:     #ffa600;
+$light-blue:     #ffa600; // Actually orange
 $green:          #92C7A3;
 $light:          #DFECE6;
 $white:          #FFFFFF;
@@ -200,7 +201,7 @@ ul {
 		color: $facebook;
 	}
 
-	.fa-github-alt:hover {
+	.fa-github:hover {
 		color: $github;
 	}
 
@@ -214,6 +215,10 @@ ul {
 	
 	.fa-reddit-alien:hover {
 		color: $reddit;
+	}
+	
+	.fa-globe:hover {
+	color: $globe;
 	}
 	
 	.fa-rss:hover {
@@ -598,7 +603,7 @@ ul {
 			blockquote {
 				position: relative;
 				width: 100%;
-		    margin-left: -15px;
+				margin-left: -15px;
 				padding-right: 10px;
 				background-color: $darker;
 				color: white;
