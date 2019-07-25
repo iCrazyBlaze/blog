@@ -155,13 +155,13 @@ Now, for the real meat of the command: the `execute` event. This is where whatev
 ```
 You can check for arguments to, by using this if statement:
 ```java
-if (args[0] == "argument1") {
+if (args[0].equals("argument1")) {
     // the player has typed "/tutorial argument1"
-} else if (args[0] == "argument2") {
+} else if (args[0].equals("argument2")) {
     // the player has typed "/tutorial argument2"
 }
 ```
-You can also replace `==` with `.equalsIgnoreCase()` if you don't want your command to be case-sensitive.
+You can also replace `.equals()` with `.equalsIgnoreCase()` if you don't want your command to be case-sensitive.
 
 You can also use `sender.sendMessage()` to reply to a command, like this:
 ```java
