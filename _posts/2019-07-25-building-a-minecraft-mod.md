@@ -358,18 +358,18 @@ Property tutorialProp = config.get(Configuration.CATEGORY_GENERAL, // What categ
         "Hello world!", // Default value
         "Our string."); // Comment
 ```
-Paste this property inside both the `loadConfig` and `saveConfig` functions. Underneath it in `loadConfig`, we will add:
+Paste this property inside both the `loadConfig()` and `saveConfig()` functions. Underneath it in `loadConfig`, we will add:
 ```java
 tutorialClass.tutorialVariable = tutorialProp.getString();
 ```
 Here, our `tutorialVariable` is part of another class, called `tutorialClass`. Because our variable is a string, we use `.getString()` to return the value. You can also use `.getInt()`, `.getBoolean()` etc. depending on the data type.
 
-Now we move on to saving to the config file. Underneath our property in `saveConfig`, we will set our property to the value of `tutorialClass.tutorialVariable` - the reverse of what we just did in `loadConfig`.
+Now we move on to saving to the config file. Underneath our property in `saveConfig()`, we will set our property to the value of `tutorialClass.tutorialVariable` - the reverse of what we just did in `loadConfig()`.
 
 ```java
 tutorialProp.set(tutorialClass.tutorialVariable);
 ```
-It's really that simple! We can call `saveConfig` from other classes - this is best done using a command.
+It's really that simple! We can call `saveConfig()` from other classes - this is best done using a command.
 
 # Helpful links
 Want to know more? Check out these links:
