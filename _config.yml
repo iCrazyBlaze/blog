@@ -6,8 +6,8 @@ baseurl: "/blog"
 url: "http://icrazyblaze.github.io/"
 title_description: "My coding projects and videos"
 title_image: "https://icrazyblaze.github.io/images/avatar.png"
-google_analytics: "UA-20365477-4"
-disqus_account: iCrazyBlaze
+google_analytics: 
+disqus_account: icrazyblazeblog
 github_repository: https://github.com/icrazyblaze/blog
 addthis_id: ra-5d39ae2f608a7320
 post_limit: 5
