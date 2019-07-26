@@ -23,7 +23,7 @@ facebook_link:
 
 # Footer
 footer_left: "Made with <i class=\"fas fa-heart\"></i> by <a href=\"https://icrazyblaze.github.io\">iCrazyBlaze</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/icrazyblaze/carte-noire\">GitHub</a> &nbsp;<i class=\"fab fa-github\"></i>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/icrazyblaze/blog\">GitHub</a> &nbsp;<i class=\"fab fa-github\"></i>"
 
 # Build settings
 markdown: kramdown
