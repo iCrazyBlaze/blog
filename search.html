@@ -23,9 +23,9 @@ layout: default
 
 <script type="text/javascript">
   SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
+    search-input: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
-    dataSource: '{{ site.baseurl }}/search.json',
+    json: '{{ site.baseurl }}/search.json',
     searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}<\/a><\/li>',
     noResultsText: 'No results found',
     limit: 10,
