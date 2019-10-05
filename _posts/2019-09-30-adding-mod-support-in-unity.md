@@ -125,14 +125,32 @@ Now you have loaded your mods, you will want to access their contents. In my cas
             var prefab = loaded.LoadAsset("MyObject");
             Instantiate(prefab);
 ```
-While this is unrealistic and very simple, it should give you a taste of the Mod.io API's possibilities.
+While this is unrealistic and very simple, it should give you a taste of the Mod.io API's possibilities. You can use `loaded.LoadAllAssets()` to produce an array of Game Objects `GameObject[]` and use loops to go over each one and do something with it. Here's an example of that:
+```csharp
+GameObject[] loadedAssets = loaded.LoadAllAssets();
+
+foreach (GameObject go in loadedAssets)
+{
+    if (go.tag == "level")
+    {
+        Debug.Log("This asset is a level!");
+    }
+    else if (go.tag == "weapon")
+    {
+        Debug.Log("This asset is a weapon!");
+    }
+}
+```
+Using Tags is a good way to differentiate assets. For example, we could have all objects tagged "weapon" be placed in front of the player and parented to the camera, so they act like weapons.
 
 # Games using Mod.io
+These games are currently using Mod.io:
 - **[MORDHAU](https://store.steampowered.com/app/629760/MORDHAU/)**
 
 - **[Totally Accurate Battle Simulator (TABS)](https://store.steampowered.com/app/508440/Totally_Accurate_Battle_Simulator/)**
 
 # Full script (InitMods.cs)
+This is the final script. It will load one prefab, called "MyObject", and instantiate it in the scene. You can find this script on my [GitHub Gist page](https://gist.github.com/iCrazyBlaze).
 ```csharp
 using System.Collections.Generic;
 using UnityEngine;
@@ -171,12 +189,17 @@ public class InitMods : MonoBehaviour
             }
 
 
-            // Below is where you add your game-specific code. Use loaded.LoadAsset to get stuff from the asset bundle.
-            var prefab = loaded.LoadAsset("MyObject");
-            Instantiate(prefab);
+            // Below is where you add your game-specific code. Use loaded.LoadAsset or loaded.LoadAllAssets to get stuff from the asset bundle.
+            GameObject[] loadedAssets = loaded.LoadAllAssets();
 
+            foreach (GameObject go in loadedAssets)
+            {
+                if (go.name == "myAsset")
+                {
+                    Instantiate(go);
+                }
+            }
         }
     }
-
 }
 ```
