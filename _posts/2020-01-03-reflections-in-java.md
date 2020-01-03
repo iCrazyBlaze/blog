@@ -4,7 +4,7 @@ title:      Using Reflection in Java
 date:       2020-01-03 16:00:00
 summary:    How to use Reflections to access private data
 categories: coding
-thumbnail: java
+thumbnail: fab fa-java
 tags:
  - modding
  - code
