@@ -1,7 +1,7 @@
 # Site settings
 title: "iCrazyBlaze's Blog"
 email: icrazyblaze1@gmail.com
-description: "My coding projects and videos"
+description: "My coding projects"
 baseurl: "/blog"
 url: "http://icrazyblaze.github.io/"
 title_description: "My blog for coding and tech."
@@ -13,8 +13,8 @@ addthis_id: ra-5d39ae2f608a7320
 post_limit: 5
 
 # Social usernames/URLs
-youtube_link: https://youtube.com/c/iCrazyBlaze
-twitter_username: crazy420blaze
+youtube_link:
+twitter_username:
 github_username:  icrazyblaze
 instagram_username: 
 reddit_username: icrazyblaze
